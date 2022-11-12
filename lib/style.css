@@ -55,10 +55,10 @@ hr {
 	border: 2px solid black;
 }
 
-#output:has(.bases:empty) {
+/* #output:has(.bases:empty) {
 	display: none;
 }
-
+ */
 textarea {
 	padding: 0 5px;
 	border-radius: 5px;
@@ -70,4 +70,8 @@ textarea {
 
 textarea:hover {
 	border: 1px solid black;
+}
+
+#copy.button {
+	margin-left: 0.3em;
 }

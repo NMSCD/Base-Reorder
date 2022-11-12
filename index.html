@@ -26,15 +26,18 @@
 			</section>
 			<hr>
 			<section id="output">
-				<button class="button is-primary is-outlined" id="copy" onclick="copyButton(this)">Copy modified
-					JSON</button>
+				<div class="columns is-desktop">
+					<div class="column">
+						<button class="button is-primary is-outlined" id="copy" onclick="copyButton(this)">Copy modified
+							JSON</button>
+					</div>
+				</div>
 				<div class="columns is-desktop">
 					<div class="column is-full-mobile">
 						<div id="bases" class="bases"></div>
 					</div>
 					<div style="display:none" class="column is-full-mobile">
-						<div id="JSONout" class="JSON">
-						</div>
+						<div id="JSONout" class="JSON"></div>
 					</div>
 				</div>
 			</section>
