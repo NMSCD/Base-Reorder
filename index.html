@@ -9,7 +9,7 @@
 	<script src="./lib/logic.js" defer></script>
 	<script>
 		window.onload = () => {
-			getBases(document.getElementById('input'));
+			getBases(document.getElementById('JSONinput'));
 		}
 	</script>
 	<link rel="stylesheet" href="./lib/style.css">
@@ -23,22 +23,32 @@
 		<main>
 			<h1 class="title is-3">BaseReorder</h1>
 			<section id="input">
-				<textarea id="input" oninput="getBases(this)"></textarea>
+				<label for="JSONinput">Copy your PersistentPlayerBases JSON section here:</label>
+				<textarea id="JSONinput" oninput="getBases(this)"></textarea>
+				<p id="unicodeWarn">
+					Potential unicode characters detected in JSON. This could lead to basenames showing up weirdly in this
+					list and in the game. <br> To resolve this issue, use the NomNom save editor (linked below) to copy the JSON.
+				</p>
+
 			</section>
 			<hr>
 			<section id="output">
 				<div class="columns is-desktop">
-					<div class="column">
+					<div class="column output-top-bar">
 						<button class="button is-primary is-outlined" id="copy" onclick="copyButton(this)">Copy modified
 							JSON</button>
+						<p>
+							It is recommended to use the <a href="https://github.com/zencq/NomNom/releases"
+								target="_blank" rel="noopener noreferrer" title="NomNom save editor">NomNom save
+								editor</a> over the Goatfungus one for copying the JSON out and into the
+							save.<br>Goatfungus has problems with certain special characters, and is extremely slow
+							when pasting big chunks of JSON (like all your bases for example).
+						</p>
 					</div>
 				</div>
 				<div class="columns is-desktop">
 					<div class="column is-full-mobile">
-						<div id="bases" class="bases"></div>
-					</div>
-					<div style="display:none" class="column is-full-mobile">
-						<div id="JSONout" class="JSON"></div>
+						<div id="bases"></div>
 					</div>
 				</div>
 			</section>

@@ -29,8 +29,7 @@ hr {
 	border-radius: 5px;
 }
 
-.draggable {
-	background-color: lightgrey;
+#bases>div {
 	padding: 1em;
 	margin: 0.3em;
 	border-radius: 5px;
@@ -38,24 +37,49 @@ hr {
 	user-select: none;
 }
 
-.draggable.dragging {
-	opacity: .5;
+#bases>div:nth-of-type(9n),
+#bases>div:nth-of-type(9n-1),
+#bases>div:nth-of-type(9n-2) {
+	border-bottom: 2px solid black;
 }
 
-.draggable.dragging:active {
-	cursor: grabbing;
+#bases>div:nth-of-type(9n),
+#bases>div:nth-of-type(9n-1),
+#bases>div:nth-of-type(9n-2),
+#bases>div:nth-of-type(9n-3),
+#bases>div:nth-of-type(9n-4),
+#bases>div:nth-of-type(9n-5),
+#bases>div:nth-of-type(9n-6),
+#bases>div:nth-of-type(9n-7),
+#bases>div:nth-of-type(9n-8) {
+	background-color: hsl(0, 0%, 90%);
 }
 
-.draggable:empty {
+#bases>div:nth-of-type(18n),
+#bases>div:nth-of-type(18n-1),
+#bases>div:nth-of-type(18n-2),
+#bases>div:nth-of-type(18n-3),
+#bases>div:nth-of-type(18n-4),
+#bases>div:nth-of-type(18n-5),
+#bases>div:nth-of-type(18n-6),
+#bases>div:nth-of-type(18n-7),
+#bases>div:nth-of-type(18n-8) {
+	background-color: hsl(0, 0%, 85%);
+}
+
+#bases>div:hover {
+	background-color: hsl(0, 0%, 77%);
+}
+
+#bases>div.sortable-chosen {
+	background-color: hsl(0, 0%, 70%);
+}
+
+#bases>span {
 	display: none;
 }
 
-.JSON {
-	font-family: 'Consolas', monospace;
-	border: 2px solid black;
-}
-
-/* #output:has(.bases:empty) {
+/* #output:has(#bases:empty) {
 	display: none;
 }
  */
@@ -76,7 +100,35 @@ textarea:hover {
 	margin-left: 0.3em;
 }
 
-.bases {
+#bases {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+}
+
+label {
+	display: block;
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+
+#output p {
+	display: inline-block;
+	margin-right: 0.3em;
+	text-align: right;
+
+}
+
+.output-top-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#unicodeWarn {
+	display: none;
+	text-align: center;
+	margin-top: 5px;
+	background-color: coral;
+	color: white;
+	border-radius: 3px;
 }
