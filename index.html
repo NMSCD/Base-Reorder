@@ -19,20 +19,26 @@
 		<nav>
 			<a href=".." title="Other pages">&larr; View other pages</a>
 		</nav>
-		<h1 class="title is-3">BaseReorder</h1>
-		<textarea id="input" oninput="getBases(this)"></textarea>
-		<hr>
-		<button class="button is-primary is-outlined" id="copy" onclick="copyButton(this)">Copy modified JSON</button>
-		<div class="columns is-desktop">
-			<div class="column is-full-mobile">
-				<div id="bases" class="bases">
+		<main>
+			<h1 class="title is-3">BaseReorder</h1>
+			<section id="input">
+				<textarea id="input" oninput="getBases(this)"></textarea>
+			</section>
+			<hr>
+			<section id="output">
+				<button class="button is-primary is-outlined" id="copy" onclick="copyButton(this)">Copy modified
+					JSON</button>
+				<div class="columns is-desktop">
+					<div class="column is-full-mobile">
+						<div id="bases" class="bases"></div>
+					</div>
+					<div style="display:none" class="column is-full-mobile">
+						<div id="JSONout" class="JSON">
+						</div>
+					</div>
 				</div>
-			</div>
-			<div style="display:none" class="column is-full-mobile">
-				<div id="JSONout" class="JSON">
-				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 	</div>
 </body>
 
