@@ -54,3 +54,29 @@ hr {
 	font-family: 'Consolas', monospace;
 	border: 2px solid black;
 }
+
+/* #output:has(.bases:empty) {
+	display: none;
+}
+ */
+textarea {
+	padding: 0 5px;
+	border-radius: 5px;
+	border: 1px solid #2F4F4FB0;
+	min-height: 10em;
+	min-width: 100%;
+	resize: vertical;
+}
+
+textarea:hover {
+	border: 1px solid black;
+}
+
+#copy.button {
+	margin-left: 0.3em;
+}
+
+.bases {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
