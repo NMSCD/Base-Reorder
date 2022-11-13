@@ -76,6 +76,10 @@ hr {
 	background-color: hsl(0, 0%, 70%);
 }
 
+#bases>div.sortable-ghost {
+	z-index: 2;
+}
+
 #bases>span {
 	display: none;
 }
