@@ -68,7 +68,7 @@ hr {
 	background-color: hsl(0, 0%, 85%);
 }
 
-#bases>div:hover {
+#bases>div:not(.immovable):hover {
 	background-color: hsl(0, 0%, 77%);
 }
 
@@ -123,6 +123,7 @@ label {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 #unicodeWarn {
@@ -132,4 +133,25 @@ label {
 	background-color: coral;
 	color: white;
 	border-radius: 3px;
+}
+
+#checkboxes {
+	align-self: center;
+}
+
+#checkboxes > div {
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 4em;
+}
+
+#checkboxes label {
+	display: inline-block;
+}
+
+.immovable {
+	cursor: not-allowed !important;
+	z-index: -1;
+	color: gray;
 }
