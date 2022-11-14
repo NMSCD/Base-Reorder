@@ -93,7 +93,7 @@ hr {
 }
 
 /* #output:has(#bases:empty) button {
-	display: none;
+	visibility: hidden;
 }
  */
 textarea {
