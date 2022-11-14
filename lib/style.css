@@ -73,7 +73,7 @@ hr {
 }
 
 #bases>div.sortable-chosen {
-	background-color: hsl(0, 0%, 70%);
+	background-color: hsl(0, 0%, 70%) !important;
 }
 
 #bases>div.sortable-ghost {
@@ -84,7 +84,7 @@ hr {
 	display: none;
 }
 
-/* #output:has(#bases:empty) {
+/* #output:has(#bases:empty) button {
 	display: none;
 }
  */
@@ -148,10 +148,6 @@ label {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 4em;
-}
-
-#checkboxes label {
-	display: inline-block;
 }
 
 .immovable {
