@@ -82,6 +82,7 @@ hr {
 
 #bases>div.sortable-chosen {
 	background-color: hsl(0, 0%, 70%) !important;
+	cursor: grabbing;
 }
 
 #bases>div.sortable-ghost {
