@@ -82,6 +82,7 @@ hr {
 
 #bases>div.sortable-chosen {
 	background-color: hsl(0, 0%, 70%) !important;
+	cursor: grabbing;
 }
 
 #bases>div.sortable-ghost {
@@ -93,7 +94,7 @@ hr {
 }
 
 /* #output:has(#bases:empty) button {
-	display: none;
+	visibility: hidden;
 }
  */
 textarea {
@@ -152,7 +153,7 @@ label {
 	align-self: center;
 }
 
-#checkboxes > div {
+#checkboxes>div {
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
