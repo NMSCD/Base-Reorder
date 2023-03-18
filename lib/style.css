@@ -18,12 +18,6 @@ nav {
 	margin: 1em 0;
 }
 
-textarea {
-	min-width: 100%;
-	min-height: 10em;
-	resize: vertical;
-}
-
 hr {
 	background-color: lightgrey;
 	border-radius: 5px;
