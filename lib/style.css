@@ -35,8 +35,8 @@ hr {
 #bases>div:nth-of-type(9n),
 #bases>div:nth-of-type(9n-1),
 #bases>div:nth-of-type(9n-2) {
-	border-bottom: 2px solid black;
-	margin-bottom: 1em;
+	border-block-end: 2px solid black;
+	margin-block-end: 1em;
 }
 
 #bases>div:nth-of-type(9n),
@@ -64,11 +64,11 @@ hr {
 }
 
 #bases>div:nth-of-type(3n-2) {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 #bases>div:nth-of-type(3n) {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 #bases>div:not(.immovable):hover {
@@ -106,7 +106,7 @@ textarea:hover {
 }
 
 #copy.button {
-	margin-left: 0.3em;
+	margin-inline-start: 0.3em;
 }
 
 #bases {
@@ -117,13 +117,13 @@ textarea:hover {
 
 label {
 	display: block;
-	margin-bottom: 3px;
+	margin-block-end: 3px;
 	font-weight: bold;
 }
 
 #output p {
 	display: inline-block;
-	margin-right: 0.3em;
+	margin-inline-end: 0.3em;
 	text-align: right;
 
 }
@@ -138,7 +138,7 @@ label {
 #unicodeWarn {
 	display: none;
 	text-align: center;
-	margin-top: 5px;
+	margin-block-start: 5px;
 	background-color: coral;
 	color: white;
 	border-radius: 3px;
