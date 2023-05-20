@@ -43,6 +43,17 @@ hr {
 	}
 }
 
+#warn {
+	background-color: lightcoral;
+	color: white;
+	border-radius: 5px;
+	padding: .5rem;
+
+	&:empty {
+		display: none;
+	}
+}
+
 #bases {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
