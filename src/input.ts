@@ -2,17 +2,18 @@ import Sortable from 'sortablejs';
 import { hideCopyBtn, stateObj } from './main';
 
 export function generateData(element: HTMLTextAreaElement): void {
-	const jsonData = getJSON(element);
+	const jsonData = element.value;
+	const isValid = validateJSON(jsonData);
 	hideCopyBtn();
+	warn();
 	if (!jsonData) return;
-	buildBaseTiles(jsonData);
-}
 
-function getJSON(element: HTMLTextAreaElement) {
-	const JSONString = element.value;
-	const returnValue = JSONString ? JSONString : ''
-	stateObj.inputJson = returnValue;
-	return returnValue;
+	if (!isValid) {
+		warn('Invalid JSON, make sure you copied the whole PersistentPlayerBases section!');
+		return;
+	}
+
+	buildBaseTiles(jsonData);
 }
 
 function buildBaseTiles(jsonData: string): void {
@@ -69,4 +70,21 @@ export function buildExtraItem(inputElement: HTMLInputElement) {
 		if (!element) return;
 		(document.getElementById('bases') as HTMLDivElement).removeChild(element);
 	}
+}
+function validateJSON(jsonData: string): boolean {
+	let result: boolean;
+	try {
+		JSON.parse(jsonData);
+		result = true;
+	} catch (error) {
+		result = false;
+	}
+
+	stateObj.inputJson = result ? jsonData : '';
+	return result;
+}
+
+function warn(message: string = ''): void {
+	const warnElement = document.getElementById('warn')
+	warnElement!.innerText = message;
 }
