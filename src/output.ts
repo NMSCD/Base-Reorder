@@ -12,7 +12,7 @@ export function copyData(input: HTMLButtonElement) {
 			input.classList.add('is-primary');
 			input.innerHTML = buttonText;
 			input.style.pointerEvents = '';
-		}, 1500);
+		}, 1500);	// NoSonar wait 1.5s before switching the button back to normal
 		console.error(error);
 		return;
 	}
@@ -22,7 +22,7 @@ export function copyData(input: HTMLButtonElement) {
 	setTimeout(() => {
 		input.innerHTML = buttonText;
 		input.style.pointerEvents = '';
-	}, 1500)
+	}, 1500)	// NoSonar wait 1.5s before switching the button back to normal
 }
 
 function getDivOrder() {

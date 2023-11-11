@@ -24,8 +24,9 @@ function buildBaseTiles(jsonData: string): void {
 	const elements = [];
 	for (let i = 0; i < bases.length; i++) {
 		const base = bases[i];
+		if (base.BaseType.PersistentBaseTypes === 'ExternalPlanetBase') continue;
 		const name = base.Name;
-		if (base.BaseType.PersistentBaseTypes == 'FreighterBase') elements.unshift(buildImmovable('Freighterbase'));
+		if (base.BaseType.PersistentBaseTypes === 'FreighterBase') elements.unshift(buildImmovable('Freighterbase'));
 		const element = buildElement(i.toString(), name);
 		elements.push(element);
 	}
