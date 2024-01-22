@@ -2,145 +2,144 @@
 
 html,
 body {
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
-	text-align: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1023px) {
-	.container {
-		margin-inline: 1rem;
-	}
+  .container {
+    margin-inline: 1rem;
+  }
 }
 
 nav {
-	margin-block: 1rem;
+  margin-block: 1rem;
 }
 
 hr {
-	background-color: lightgrey;
-	border-radius: 5px;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 
 @for $i from 0 through 2 {
-	#bases>div:nth-of-type(9n - #{$i}) {
-		border-block-end: 2px solid black;
-		margin-block-end: 1rem;
-	}
+  #bases > div:nth-of-type(9n - #{$i}) {
+    border-block-end: 2px solid black;
+    margin-block-end: 1rem;
+  }
 }
 
 @for $i from 0 through 8 {
-	#bases>div {
-		&:nth-of-type(9n - #{$i}) {
-			background-color: vars.$base-light;
-		}
+  #bases > div {
+    &:nth-of-type(9n - #{$i}) {
+      background-color: vars.$base-light;
+    }
 
-		&:nth-of-type(18n - #{$i}) {
-			background-color: vars.$base-dark;
-		}
-	}
+    &:nth-of-type(18n - #{$i}) {
+      background-color: vars.$base-dark;
+    }
+  }
 }
 
 #warn {
-	background-color: lightcoral;
-	color: white;
-	border-radius: 5px;
-	padding: .5rem;
+  background-color: lightcoral;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
 
-	&:empty {
-		display: none;
-	}
+  &:empty {
+    display: none;
+  }
 }
 
 #bases {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 0 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0.3rem;
 
-	&>div {
-		padding: 1rem;
-		margin: 0.3rem;
-		border-radius: 5px;
-		cursor: grab;
-		-webkit-user-select: none;
-		user-select: none;
+  & > div {
+    padding: 1rem;
+    margin: 0.3rem;
+    border-radius: 5px;
+    cursor: grab;
+    -webkit-user-select: none;
+    user-select: none;
 
-		&:nth-of-type(3n-2) {
-			margin-inline-start: 0;
-		}
+    &:nth-of-type(3n-2) {
+      margin-inline-start: 0;
+    }
 
-		&:nth-of-type(3n) {
-			margin-inline-end: 0;
-		}
+    &:nth-of-type(3n) {
+      margin-inline-end: 0;
+    }
 
-		&:not(.immovable):hover {
-			background-color: vars.$base-hover;
-		}
+    &:not(.immovable):hover {
+      background-color: vars.$base-hover;
+    }
 
-		&.sortable-chosen {
-			background-color: vars.$base-focus !important;
-			cursor: grabbing;
-		}
+    &.sortable-chosen {
+      background-color: vars.$base-focus !important;
+      cursor: grabbing;
+    }
 
-		&.sortable-ghost {
-			z-index: 2;
-		}
-	}
+    &.sortable-ghost {
+      z-index: 2;
+    }
+  }
 
-	&>span {
-		display: none;
-	}
+  & > span {
+    display: none;
+  }
 }
 
 #output:has(#bases:empty) button {
-	display: none;
+  display: none;
 }
 
 textarea {
-	padding: 0 5px;
-	border-radius: 5px;
-	border: 1px solid #2F4F4FB0;
-	min-height: 10rem;
-	min-width: 100%;
-	resize: vertical;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #2f4f4fb0;
+  min-height: 10rem;
+  min-width: 100%;
+  resize: vertical;
 
-	&:hover {
-		border: 1px solid black;
-	}
+  &:hover {
+    border: 1px solid black;
+  }
 }
 
 #copy.button {
-	margin-inline-start: 0.3rem;
+  margin-inline-start: 0.3rem;
 }
 
 label {
-	display: block;
-	margin-block-end: 3px;
-	font-weight: bold;
+  display: block;
+  margin-block-end: 3px;
+  font-weight: bold;
 }
 
 #output p {
-	display: inline-block;
-	margin-inline-end: 0.3rem;
-	text-align: right;
-
+  display: inline-block;
+  margin-inline-end: 0.3rem;
+  text-align: right;
 }
 
 #checkboxes {
-	align-self: center;
+  align-self: center;
 
-	&>div {
-		text-align: center;
-		display: flex;
-		justify-content: space-between;
-		margin-inline: 4rem;
-	}
+  & > div {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 4rem;
+  }
 }
 
 .immovable {
-	cursor: not-allowed !important;
-	z-index: -1;
-	color: gray;
+  cursor: not-allowed !important;
+  z-index: -1;
+  color: gray;
 }
