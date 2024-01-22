@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: Build
