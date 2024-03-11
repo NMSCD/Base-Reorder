@@ -13,7 +13,7 @@
     "@types/sortablejs": "^1.15.8",
     "sass": "^1.71.1",
     "typescript": "^5.4.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.5"
   },
   "dependencies": {
     "bulma": "^0.9.4",
