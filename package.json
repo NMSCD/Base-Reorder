@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.11",
     "@types/sortablejs": "^1.15.8",
     "sass": "^1.76.0",
     "typescript": "^5.4.5",
