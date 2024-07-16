@@ -10,10 +10,3 @@ export const stateObj = {
 };
 
 generateData(document.getElementById('JSONinput') as HTMLTextAreaElement);
-
-// remove this when :has() works in Firefox
-export function hideCopyBtn() {
-  const copyBtn = document.getElementById('copy');
-
-  copyBtn!.style.display = stateObj.inputJson ? '' : 'none';
-}

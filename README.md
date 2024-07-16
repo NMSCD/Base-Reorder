@@ -1,4 +1,4 @@
-# BaseReorder
+# Base Reorder
 
 This web app allows you to reorder the bases in the teleporter UI in No Man's
 Sky by simply drag'n'dropping them where you want them to be.

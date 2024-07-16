@@ -1,10 +1,9 @@
 import Sortable from 'sortablejs';
-import { hideCopyBtn, stateObj } from './main';
+import { stateObj } from './main';
 
 export function generateData(element: HTMLTextAreaElement): void {
   const jsonData = element.value;
   const isValid = validateJSON(jsonData);
-  hideCopyBtn();
   warn();
   if (!jsonData) return;
 
