@@ -3,7 +3,8 @@ import { stateObj } from './main';
 export function copyData(input: HTMLButtonElement) {
   const buttonText = input.innerHTML;
   input.style.pointerEvents = 'none';
-  input.classList.remove('is-outlined');
+  const outlinedClassName = 'is-outlined';
+  input.classList.remove(outlinedClassName);
   try {
     outputJSON();
   } catch (error) {
@@ -25,7 +26,7 @@ export function copyData(input: HTMLButtonElement) {
   setTimeout(() => {
     input.innerHTML = buttonText;
     input.style.pointerEvents = '';
-    input.classList.add('is-outlined');
+    input.classList.add(outlinedClassName);
   }, 1500); // NoSonar wait 1.5s before switching the button back to normal
 }
 
