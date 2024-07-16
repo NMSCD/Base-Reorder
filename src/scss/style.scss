@@ -3,15 +3,17 @@
   --base-dark: hsl(0, 0%, 85%);
   --base-hover: hsl(0, 0%, 77%);
   --base-focus: hsl(0, 0%, 70%);
+  --card-colour: black;
 }
 
-html,
-body {
-  font-family: sans-serif;
-}
-
-h1 {
-  text-align: center;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-light: hsl(0, 0%, 20%);
+    --base-dark: hsl(0, 0%, 25%);
+    --base-hover: hsl(0, 0%, 33%);
+    --base-focus: hsl(0, 0%, 40%);
+    --card-colour: white;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -24,14 +26,9 @@ nav {
   margin-block: 1rem;
 }
 
-hr {
-  background-color: lightgrey;
-  border-radius: 5px;
-}
-
 @for $i from 0 through 2 {
   #bases > div:nth-of-type(9n - #{$i}) {
-    border-block-end: 2px solid black;
+    border-block-end: 2px solid var(--card-colour);
     margin-block-end: 1rem;
   }
 }
@@ -63,6 +60,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 0.3rem;
+  color: var(--card-colour);
 
   & > div {
     padding: 1rem;
@@ -103,26 +101,13 @@ hr {
   display: none;
 }
 
-textarea {
-  padding: 0 5px;
-  border-radius: 5px;
-  border: 1px solid #2f4f4fb0;
-  min-height: 10rem;
-  min-width: 100%;
-  resize: vertical;
-
-  &:hover {
-    border: 1px solid black;
-  }
-}
-
 #copy.button {
   margin-inline-start: 0.3rem;
 }
 
 label {
   display: block;
-  margin-block-end: 3px;
+  margin-block-end: 0.25rem;
   font-weight: bold;
 }
 
