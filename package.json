@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "bulma": "^1.0.2",
-    "sortablejs": "^1.15.0"
+    "sortablejs": "^1.15.3"
   }
 }
