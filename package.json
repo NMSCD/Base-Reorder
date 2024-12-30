@@ -18,7 +18,7 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
-    "bulma": "^1.0.2",
+    "bulma": "^1.0.3",
     "sortablejs": "^1.15.6"
   }
 }
