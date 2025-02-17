@@ -10,7 +10,7 @@
     "format": "prettier --write src/"
   },
   "devDependencies": {
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@types/sortablejs": "^1.15.8",
     "prettier": "^3.5.0",
     "sass": "^1.84.0",
