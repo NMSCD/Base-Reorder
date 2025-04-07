@@ -10,12 +10,12 @@
     "format": "prettier --write src/"
   },
   "devDependencies": {
-    "@types/node": "^22.13.8",
+    "@types/node": "^22.14.0",
     "@types/sortablejs": "^1.15.8",
     "prettier": "^3.5.3",
-    "sass": "^1.85.1",
-    "typescript": "^5.8.2",
-    "vite": "^6.2.0"
+    "sass": "^1.86.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.5"
   },
   "dependencies": {
     "bulma": "^1.0.3",
