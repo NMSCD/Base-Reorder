@@ -13,7 +13,7 @@
     "@types/node": "^22.15.3",
     "@types/sortablejs": "^1.15.8",
     "prettier": "^3.5.3",
-    "sass": "^1.87.0",
+    "sass": "^1.88.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   },
