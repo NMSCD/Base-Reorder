@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/node": "^26.5.1",
     "@types/sortablejs": "^1.15.9",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.8",
     "sass": "^1.104.0",
     "typescript": "^5.9.3",
     "vite": "^8.3.0"
